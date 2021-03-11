@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, Row, Col } from 'react-bootstrap';
-import { InputGroup, FormControl } from 'react-bootstrap';
+import { Button, Row, Col, Card, InputGroup, FormControl, ListGroup } from 'react-bootstrap';
 import CountrySelector from './country-selector';
+import icon from './css/client-img.png';
 
 const ShoppingCard = () => {
     return (
         <div className='wrapp-for-card'>    
-                <Row className='row'>
+                <Row>
                     <Col xs={7} className='first-container'>
                         <h4>Shipping info</h4>
                         <label>Recipient</label>
@@ -45,7 +45,42 @@ const ShoppingCard = () => {
                         <Button variant="primary">Continue</Button>                         
                       </Col>  
                     <Col className='second-container'>
-                    123
+                        <div className='order'>
+                            <label>Order Summary</label>
+                            <a href='#'>edit order</a>
+                        </div>
+                        <Card>
+                            <Card.Img style={{ width: '3rem', height: '3rem' }} src={icon} />
+                            <Card.Body>
+                                <span className='card-title'>Card Title</span>
+                                <span>Black</span>
+                                <span>Quantity: 1</span>
+                            </Card.Body>
+                            <span className='card-title'>$250</span>
+                        </Card>
+                        <Card>
+                            <Card.Img style={{ width: '3rem', height: '3rem' }} src={icon} />
+                            <Card.Body>
+                                <span className='card-title'>Card Title</span>
+                                <span>Black</span>
+                                <span>Quantity: 1</span>
+                            </Card.Body>
+                            <span className='card-title'>$250</span>
+                        </Card>
+                        <Card>
+                            <Card.Img style={{ width: '3rem', height: '3rem' }} src={icon} />
+                            <Card.Body>
+                                <span className='card-title'>Card Title</span>
+                                <span>Black</span>
+                                <span>Quantity: 1</span>
+                            </Card.Body>
+                            <span className='card-title'>$250</span>
+                        </Card>
+                        <ListGroup>
+                            <ListGroup.Item>Cras justo odio</ListGroup.Item>
+                            <ListGroup.Item>Dapibus ac facilisis in</ListGroup.Item>
+                            <ListGroup.Item>Morbi leo risus</ListGroup.Item>
+                        </ListGroup>
                     </Col>
                 </Row>          
         </div>  
