@@ -1,0 +1,69 @@
+.main-wrapper {
+    display: flex;
+    width: 60%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.wrapp-for-card {
+    width: 65%;
+    height: 60%;
+    margin-top: 50px;
+}
+
+.row {
+    height: 100%;
+}
+
+.country-dropdown {
+    height: 38px;
+    border: 1px solid #cfcfcf;
+    margin-right: 20px;
+    border-radius: 4px;
+    color: #707070;
+    padding-left: 8px;
+    width: 85%;      
+}
+
+.country-group {
+    display: flex;
+}
+
+.country-dropdown:active {
+    border: none;
+}
+
+.first-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 40px 0 40px;
+}
+
+.second-container {
+    background-color: #f2f4ff;
+}
+
+.wrapp-for-card h4 {
+    color: #7f00ad;
+    padding: 16px 0 16px 0;
+}
+
+.wrapp-for-card label {
+    color: #7f00ad;
+}
+
+.wrapp-for-card p {
+    color: #6e6e6e;
+    font-size: 13px;
+    margin: 0 40px 0 20px;
+}
+
+.row button {
+    background-color: #7f00ad;
+    margin-top: 15px;
+    width: 44%;
+}
