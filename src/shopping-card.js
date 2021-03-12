@@ -1,29 +1,36 @@
 import React from 'react';
 import { Row, Col, Breadcrumb } from 'react-bootstrap';
-import Inputs from './inputs';
-import CardsGoods from './card-with-goods';
+import ShippingPage from './pages/shipping-page';
+import SummaryPage from './pages/summary-page';
+import BillingPage from './pages/billing-page';
+import PaymentPage from './pages/payment-page';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 
 const ShoppingCard = () => {
     return (
-        <div className='wrapp-for-card'>    
+        <Router>
+            <div className='wrapp-for-card'>    
                 <Row>
                     <Col xs={7}>
                         <Breadcrumb>
-                            <Breadcrumb.Item active href="#" >Shipping</Breadcrumb.Item>
-                            <Breadcrumb.Item href="#" >Billing</Breadcrumb.Item>
-                            <Breadcrumb.Item href="#" >Payment</Breadcrumb.Item>
+                            <Breadcrumb.Item href="/shipping/">Shipping</Breadcrumb.Item>
+                            <Breadcrumb.Item href="/billing/">Billing</Breadcrumb.Item>
+                            <Breadcrumb.Item href="/payment/">Payment</Breadcrumb.Item>
                         </Breadcrumb>
                         
                         <div className='wrapper-for-inputgroup'>
-                            <Inputs/>
+                            <Route path='/shipping/' component={ShippingPage}/>
+                            <Route path='/billing/' component={BillingPage}/>
+                            <Route path='/payment/' component={PaymentPage}/>
                         </div>                       
                     </Col>                   
 
                     <Col className='second-container'>
-                        <CardsGoods/>
+                        <SummaryPage/>
                     </Col>
                 </Row>          
-        </div>  
+            </div>  
+        </Router>  
     )
 }
 

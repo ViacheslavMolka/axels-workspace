@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
-import icon from './css/client-img.png';
+import icon from '../css/client-img.png';
 
-const CardsGoods = () => {
+const SummaryPage = () => {
     return (
         <>
             <div className='top-wrapper'>
@@ -68,4 +68,4 @@ const CardsGoods = () => {
     )
 }
 
-export default CardsGoods;
+export default SummaryPage;

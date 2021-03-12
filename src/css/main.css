@@ -24,7 +24,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 40px 0 40px;
+    padding: 0 25px 0 25px;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
     max-width: 100%;
@@ -56,6 +56,20 @@
     border-bottom-right-radius: 7px;
 }
 
+.wrapper-for-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper-for-title a {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 26px 0 16px 0;
+    color: #7f00ad;
+}
+
 .top-wrapper {
     height: 53%;
 }
@@ -70,6 +84,21 @@
     color: #7f00ad;
     font-size: 27px;
     padding: 26px 0 16px 0;
+}
+
+.payment-info {
+    color: #7f00ad;
+    font-size: 27px;
+    padding: 26px 0 0 0;
+}
+
+.wrapp-for-payment {
+    padding-bottom: 20px;
+}
+
+.wrapp-for-payment p {
+    color: #6e6e6e;
+    font-size: 14px;
 }
 
 .wrapp-for-card label {
@@ -118,6 +147,18 @@
     background-color: #7f00ad;
     margin-top: 15px;
     width: 44%;
+}
+
+.pay-btn {
+    margin-top: 25px !important;
+}
+
+.expire-date {
+    padding-right: 15px !important;
+}
+
+.security-code {
+    padding-right: 70px !important;
 }
 
 .frontend-text {

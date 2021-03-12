@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
-import CountrySelector from './country-selector';
+import CountrySelector from '../country-selector';
 
-const Inputs = () => {
+const ShippingPage = () => {
     return(
         <>
             <label className='shipping-info'>Shipping Info</label>
@@ -42,4 +42,4 @@ const Inputs = () => {
     )
 }
 
-export default Inputs;
+export default ShippingPage;
