@@ -23,7 +23,7 @@ export default class CountrySelector extends Component {
             value={country}
             onChange={(val) => this.selectCountry(val)} />
         <InputGroup>
-            <FormControl placeholder="ZIP"/>
+            <FormControl type='number' placeholder="ZIP"/>
         </InputGroup>     
       </div>
     );

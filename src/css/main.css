@@ -19,25 +19,7 @@
     border-radius: 10px;
 }
 
-.country-dropdown {
-    height: 38px;
-    border: 1px solid #cfcfcf;
-    margin-right: 20px;
-    border-radius: 4px;
-    color: #707070;
-    padding-left: 8px;
-    width: 85%;      
-}
-
-.country-group {
-    display: flex;
-}
-
-.country-dropdown:active {
-    border: none;
-}
-
-.first-container {
+.col-7 {
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -45,17 +27,49 @@
     padding: 0 40px 0 40px;
     border-top-left-radius: 7px;
     border-bottom-left-radius: 7px;
+    max-width: 100%;
+}
+
+.breadcrumb {
+    background-color: #ffffff;
+    font-size: 13px;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    padding: 0;
+    height: 10%;
+    padding-bottom: 10px;
+}
+
+.breadcrumb-item.active {
+    color: #7f00ad;
+}
+
+.breadcrumb a {
+    color: #6e6e6e;
+    text-decoration: none;
 }
 
 .second-container {
+    height: 100%;
     background-color: #f2f4ff;
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
 }
 
-.wrapp-for-card h4 {
+.top-wrapper {
+    height: 53%;
+}
+
+.wrapper-for-inputgroup {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.shipping-info {
     color: #7f00ad;
-    padding: 16px 0 16px 0;
+    font-size: 27px;
+    padding: 26px 0 16px 0;
 }
 
 .wrapp-for-card label {
@@ -66,6 +80,38 @@
     color: #6e6e6e;
     font-size: 13px;
     margin: 0 40px 0 20px;
+}
+
+.form-control {
+    color: #000;
+    font-weight: bold;
+}
+
+.col-7 input[placeholder] {
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+
+.col-7 input::-webkit-inner-spin-button {
+    -webkit-appearance: none; 
+}
+
+.country-dropdown {
+    height: 38px;
+    border: 1px solid #cfcfcf;
+    margin-right: 20px;
+    border-radius: 4px;
+    color: #707070;
+    padding-left: 8px;
+    width: 85%; 
+}
+
+.country-group {
+    display: flex;
+}
+
+.country-dropdown option:checked {
+    color: #000;
 }
 
 .row button {
@@ -160,11 +206,43 @@
     color: #6e6e6e;
 }
 
-.list-group::after {
+.wrapper-for-list-group {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.wrapper-for-list-group::after {
     content: '';
     position: absolute;
     width: 100%;
     height: 1px;
     bottom: -8px;
     background-color: #e3e1eb;
+}
+
+.total-price {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-weight: 700;
+    font-size: 12px;
+    color: #250029;
+}
+
+.footer-text {
+    font-size: 10px;
+    color: #6e6e6e;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.bottom-wrapper {
+    display: flex;
+    height: 47%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
