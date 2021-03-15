@@ -54,6 +54,25 @@
     color: #7f00ad;
 }
 
+.navbar-brand {
+    position: relative;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    color: #ffffff;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e00d73;
+    top: 7px;
+    right: -8px;
+}
+
 /* Wrapper for card */
 
 /* Left card */
@@ -76,6 +95,11 @@
     padding: 0;
     height: 10%;
     padding-bottom: 10px;
+}
+
+.breadcrumb-item.active a{
+    color: #7f00ad;
+    font-weight: 500;
 }
 
 .breadcrumb a {
@@ -118,6 +142,12 @@
     -webkit-appearance: none; 
 }
 
+.mb-3 svg {
+    position: absolute;
+    bottom: 12px;
+    right: 5px;
+}
+
 .country-dropdown {
     height: 38px;
     border: 1px solid #cfcfcf;
@@ -136,14 +166,10 @@
     outline: none;
 }
 
-/* .country-dropdown select option{
-    color: #000;
-} */
-
 .row button {
     background-color: #7f00ad;
     margin-top: 1rem;
-    width: 44%;
+    width: 45%;
 }
 
 .wrapper-for-title {
@@ -162,6 +188,11 @@
 
 .pay-btn {
     margin-top: 1.5rem !important;
+}
+
+.form-row {
+    display: flex;
+    align-items: flex-end;
 }
 
 .expire-date {
@@ -296,15 +327,27 @@
     padding-bottom: 10px;
 }
 
-
 /* Right card */
 
 /* Media */
 
 @media screen and (max-width:1200px) {
+    .main-wrapper {
+        width: 70%;
+    }
+    .wrapp-for-card {
+        width: 65%;
+    }
     .mb-3 p {
         width: 80px;
         font-size: 11px;
+    }
+    .expire-date {
+        padding-right: 15px !important;
+    }
+    
+    .security-code {
+        padding-right: 40px !important;
     }
 }
 
@@ -328,6 +371,12 @@
 }
 
 @media screen and (max-width:767px) {
+    .main-wrapper {
+        width: 80%;
+    }
+    .wrapp-for-card {
+        width: 75%;
+    }
     .navigation {
         display: flex;
         justify-content: space-between;
@@ -354,6 +403,9 @@
     }
     .navbar-brand {
         font-size: 12px;
+    }
+    .shipping-info {
+        font-size: 23px;
     }
     .col-7 input[placeholder] {
         font-size: 14px;

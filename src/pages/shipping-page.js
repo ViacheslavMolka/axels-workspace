@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button, InputGroup, FormControl } from 'react-bootstrap';
 import CountrySelector from '../country-selector';
+import { RecordCircleFill } from 'react-bootstrap-icons';
+import { Link } from 'react-router-dom';
 
 const ShippingPage = () => {
     return(
@@ -32,12 +34,13 @@ const ShippingPage = () => {
             </InputGroup>
 
             <InputGroup className="mb-3">
-                <FormControl placeholder="City"/>
+                <FormControl className='city' placeholder="City"/>
+                <RecordCircleFill color='#7f00ad'/>
             </InputGroup>
 
             <CountrySelector/>    
 
-            <Button variant="primary">Continue</Button>
+            <Link to='/billing/'><Button variant="primary">Continue</Button></Link>
         </>
     )
 }

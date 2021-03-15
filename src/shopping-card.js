@@ -5,6 +5,7 @@ import SummaryPage from './pages/summary-page';
 import BillingPage from './pages/billing-page';
 import PaymentPage from './pages/payment-page';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 const ShoppingCard = () => {
     return (
@@ -13,9 +14,15 @@ const ShoppingCard = () => {
                 <Row>
                     <Col xs={7}>
                         <Breadcrumb>
-                            <Breadcrumb.Item href="/shipping/">Shipping</Breadcrumb.Item>
-                            <Breadcrumb.Item href="/billing/">Billing</Breadcrumb.Item>
-                            <Breadcrumb.Item href="/payment/">Payment</Breadcrumb.Item>
+                            <LinkContainer to='/shipping/' activeClassName='active'>
+                                <Breadcrumb.Item>Shipping</Breadcrumb.Item>
+                            </LinkContainer>
+                            <LinkContainer to='/billing/' activeClassName='active'>
+                                <Breadcrumb.Item>Billing</Breadcrumb.Item>
+                            </LinkContainer>
+                            <LinkContainer to='/payment/' activeClassName='active'>
+                                <Breadcrumb.Item>Payment</Breadcrumb.Item>
+                            </LinkContainer>
                         </Breadcrumb>
                         
                         <div className='wrapper-for-inputgroup'>
