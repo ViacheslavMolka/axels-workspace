@@ -6,8 +6,8 @@ const Header = () => {
   return (
     <Container>
         <Navbar className='navigation' expand="lg" variant="light" bg="light">
-          <Navbar.Brand href="#"><CodeSlash size={29} color='#cf4dff'/> <span className='frontend-text'>Front-end Developer Test Task</span></Navbar.Brand>
-          <Navbar.Brand href="#"><span className='cart-text'>cart</span><Cart3 size={19} color='#cf4dff'/><span className='circle'>3</span></Navbar.Brand>
+          <Navbar.Brand href="https://www.google.com/"><CodeSlash size={29} color='#cf4dff'/> <span className='frontend-text'>Front-end Developer Test Task</span></Navbar.Brand>
+          <Navbar.Brand href="https://www.google.com/"><span className='cart-text'>cart</span><Cart3 size={19} color='#cf4dff'/><span className='circle'>3</span></Navbar.Brand>
         </Navbar> 
     </Container>
   )

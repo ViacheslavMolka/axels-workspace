@@ -8,7 +8,7 @@ const BillingPage = () => {
         <>
             <div className='wrapper-for-title'>
                 <label className='shipping-info'>Billing Information</label>
-                <a href='#'>Same as shipping</a>
+                <a href='/#'>Same as shipping</a>
             </div>
             <label>Billing Contact</label>
 

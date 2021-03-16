@@ -8,7 +8,7 @@ const SummaryPage = () => {
             <div className='top-wrapper'>
                 <div className='order'>
                     <label>Order Summary</label>
-                    <a href='#'>edit order</a>
+                    <a href='/#'>edit order</a>
                 </div>    
 
                 <Card>
