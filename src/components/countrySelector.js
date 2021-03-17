@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { CountryDropdown } from 'react-country-region-selector';
 import { InputGroup, FormControl } from 'react-bootstrap';
+import { CountryGroup } from '../styled/countryStyles';
 
 
 export default class CountrySelector extends Component {
@@ -16,7 +17,7 @@ export default class CountrySelector extends Component {
   render () {
     const { country } = this.state;
     return (
-      <div className='country-group'>
+      <CountryGroup>
         <CountryDropdown
             classes='country-dropdown'
             defaultOptionLabel='Country'
@@ -25,7 +26,7 @@ export default class CountrySelector extends Component {
         <InputGroup>
             <FormControl type='number' placeholder="ZIP"/>
         </InputGroup>     
-      </div>
+      </CountryGroup>
     );
   }
 }
