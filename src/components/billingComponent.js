@@ -1,15 +1,18 @@
 import React from 'react';
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
-import CountrySelector from './countrySelector';
 import { Link } from 'react-router-dom';
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
+
+import CountrySelector from './countrySelector';
+
 import { MainTitle } from '../styled/shoppingCardStyles';
 import { BillingTitle } from '../styled/billingStyles';
+
 
 const BillingComponent = () => (
     <>
         <BillingTitle>
             <MainTitle>Billing Information</MainTitle>
-            <a href='/#'>Same as shipping</a>
+            <a className='billing-link' href='/#'>Same as shipping</a>
         </BillingTitle>
         <label>Billing Contact</label>
 

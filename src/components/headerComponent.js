@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from 'react-bootstrap';
+
 import { CodeSlash, Cart3 } from 'react-bootstrap-icons';
 import { HeaderWrapper } from '../styled/headerStyles';
 

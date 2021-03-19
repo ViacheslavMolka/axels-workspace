@@ -90,7 +90,4 @@ align-items: center;
     align-items: flex-end;
     padding-bottom: 10px;
 }
-@media (max-width: 520px) {
-    height: 200px;
-}
 `

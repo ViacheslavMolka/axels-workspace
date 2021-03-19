@@ -17,18 +17,12 @@ background-color: #ffffff!important;
 }
 & span.navbar-brand span.frontend-text {
     color: #7f00ad;
-    font-weight: 200;
-    @media (max-width: 520px) {
-        font-size: 14px
-    }
+    font-weight: 200;   
 }
 & span.navbar-brand span.cart-text {
     color: #cf4dff;
     font-weight: 400;
     margin-right: 5px;
-    @media (max-width: 520px) {
-        font-size: 14px
-    }
 }
 & span.navbar-brand {
     position: relative;

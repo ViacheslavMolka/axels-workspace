@@ -1,8 +1,10 @@
 import React from 'react';
-import { Button, InputGroup, FormControl } from 'react-bootstrap';
-import CountrySelector from './countrySelector';
-import { RecordCircleFill } from 'react-bootstrap-icons';
 import { Link } from 'react-router-dom';
+import { Button, InputGroup, FormControl } from 'react-bootstrap';
+
+import CountrySelector from './countrySelector';
+
+import { RecordCircleFill } from 'react-bootstrap-icons';
 import { MainTitle, InputWrapper } from '../styled/shoppingCardStyles';
 
 const ShippingComponent = () => (

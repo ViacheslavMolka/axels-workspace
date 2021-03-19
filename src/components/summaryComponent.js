@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
+
 import icon from '../img/client-img.png';
 import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/summatyStyles';
 
@@ -56,7 +57,7 @@ const SummaryCompoment = () => (
             </WrapperListItems>
         </div>
 
-        <BottomWrapper>
+        <BottomWrapper className='bottom-wrapp'>
             <div className='total-price'>
                 <label>Total</label>
                 <label>$407</label>

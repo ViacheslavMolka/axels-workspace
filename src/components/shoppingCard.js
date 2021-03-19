@@ -1,17 +1,14 @@
 import React from 'react';
-import { Row, Col, Container } from 'react-bootstrap';
-import ShippingComponent from './shippingComponent';
-import BillingComponent from './billingComponent';
-import PaymentComponent from './paymentComponent';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
-import Breadcrumbs from './breadcrumbs';
+import { Row, Col } from 'react-bootstrap';
+
+import { Breadcrumbs, ShippingComponent, PaymentComponent, BillingComponent, SummaryCompoment } from './index';
+
 import { RouteWrapper } from '../styled/shoppingCardStyles';
-import SummaryCompoment from './summaryComponent';
 
 
 const ShoppingCard = () => (
     <Router>
-            <Container>
                 <Row>
                     <Col sm={4}>
                         <Breadcrumbs/>                  
@@ -25,7 +22,6 @@ const ShoppingCard = () => (
                         <SummaryCompoment/>
                     </Col>
                 </Row>          
-            </Container>
     </Router>  
 );
 

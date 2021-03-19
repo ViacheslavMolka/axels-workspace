@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { CountryDropdown } from 'react-country-region-selector';
 import { InputGroup, FormControl } from 'react-bootstrap';
+
+import { CountryDropdown } from 'react-country-region-selector';
 import { CountryGroup } from '../styled/countryStyles';
 
 
