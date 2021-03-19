@@ -14,6 +14,7 @@ label {
 &.row {
   justify-content: center;
   margin-top: 50px;
+  width: 100%;
 }
 
 &.row button {
@@ -77,16 +78,16 @@ label {
         width: 100%!important;   
     }
     @media (max-width: 1200px) {
-        width: 80%;
+        width: 80%!important;
     }
     @media (max-width: 992px) {
-        width: 75%;
+        width: 75%!important;
     }
     @media (max-width: 767px) {
-        width: 80%;
+        width: 80%!important;
     }
     @media (max-width: 520px) {
-        width: 100%;
+        width: 100%!important;
     }
 }
 
@@ -95,13 +96,13 @@ label {
         width: 2000px;   
     }
     @media (max-width: 992px) {
-        width: 80%;
+        width: 80%!important;
         display: block;
         margin: 0 auto;
         margin-top: 50px;
     }
     @media (max-width: 520px) {
-    width: 90%;
+        width: 90%!important;
     }
 }
 
