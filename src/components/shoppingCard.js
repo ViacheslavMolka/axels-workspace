@@ -2,7 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import { Row, Col } from 'react-bootstrap';
 
-import { Breadcrumbs, ShippingComponent, PaymentComponent, BillingComponent, SummaryCompoment } from './index';
+import { Breadcrumbs, ShippingComponent, PaymentComponent, BillingComponent } from './index';
+import OrderPage from '../pages/orderPage';
 
 import { RouteWrapper } from '../styled/shoppingCardStyles';
 
@@ -19,7 +20,7 @@ const ShoppingCard = () => (
                         </RouteWrapper>                       
                     </Col>                   
                     <Col sm={3}>
-                        <SummaryCompoment/>
+                        <OrderPage/>
                     </Col>
                 </Row>          
     </Router>  
