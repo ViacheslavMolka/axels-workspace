@@ -108,7 +108,7 @@ const ShippingComponent = () => {
                                 onChange={handleChange}
                                 onBlur={handleBlur}
                                 placeholder="City"/>
-                            <RecordCircleFill color='#7f00ad'/>
+                            <RecordCircleFill color={values.city ? '#cfcfcf' : '#7f00ad'}/>
                         </InputGroup>
 
                         <CountryGroup>

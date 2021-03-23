@@ -39,7 +39,8 @@ export const PaymentSchema = Yup.object().shape({
   fullname: Yup.string()
     .required("1"),
 
-  number: Yup.number() 
+  number: Yup.string() 
+    .length(19)
     .required("1"),
 
   date: Yup.number()
@@ -48,3 +49,4 @@ export const PaymentSchema = Yup.object().shape({
   code: Yup.number()
     .required("1")
 });
+

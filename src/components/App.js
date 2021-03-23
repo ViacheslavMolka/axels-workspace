@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { ShoppingCard, Header } from './index';
+import { ShoppingCard } from './index';
+import HeaderPage from '../pages/headerPage'; 
 
 import { GlobalStyle } from '../styled/globalStyles';
 import { AppWrapper } from '../styled/appStyles'
@@ -11,7 +12,7 @@ const App = () => (
   <>
     <GlobalStyle/>
     <AppWrapper className='app'>
-      <Header/>
+      <HeaderPage/>
       <ShoppingCard/>
     </AppWrapper>  
   </>
