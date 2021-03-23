@@ -14,9 +14,9 @@ const ShoppingCard = () => (
                     <Col sm={4}>
                         <Breadcrumbs/>                  
                         <RouteWrapper>
-                            <Route path='/shipping/' component={ShippingComponent}/>
-                            <Route path='/billing/' component={BillingComponent}/>
-                            <Route path='/payment/' component={PaymentComponent}/>
+                            <Route path='/shipping/' component={ShippingComponent} exact/>
+                            <Route path='/billing/' component={BillingComponent} exact/>
+                            <Route path='/payment/' component={PaymentComponent} exact/>
                         </RouteWrapper>                       
                     </Col>                   
                     <Col sm={3}>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 
-import icon from '../img/client-img.png';
 import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/summatyStyles';
 
 const SummaryCompoment = ({data}) => {
@@ -20,8 +19,6 @@ const SummaryCompoment = ({data}) => {
             </Cards>
         )
     })
-    
-    console.log(subtotal)
 
     return (
         <>

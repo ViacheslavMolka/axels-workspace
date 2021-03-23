@@ -61,6 +61,10 @@ label {
   color: #000;
 }
 
+&.error {
+    background-color: #fff9eb;
+}
+
 &.form-control[placeholder] {
   text-overflow: ellipsis;
 }
