@@ -49,4 +49,3 @@ export const PaymentSchema = Yup.object().shape({
   code: Yup.number()
     .required("1")
 });
-

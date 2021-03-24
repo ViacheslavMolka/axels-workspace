@@ -27,4 +27,4 @@ export {
     Cards,
     WrapperListItems,
     BottomWrapper
-}
+};
