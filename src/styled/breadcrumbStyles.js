@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Bread = styled.ol`
+const Bread = styled.ol`
 display: flex;
 list-style: none;
 background-color: #ffffff;
@@ -19,3 +19,5 @@ align-items: flex-start;
     font-weight: 500;
 }
 `
+
+export default Bread;

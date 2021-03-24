@@ -3,14 +3,14 @@ import React from 'react';
 import { ShoppingCard } from './index';
 import HeaderPage from '../pages/headerPage'; 
 
-import { GlobalStyle } from '../styled/globalStyles';
-import { AppWrapper } from '../styled/appStyles'
+import { GlobalStyle, AppWrapper, GlobalMediaStyle } from '../styled/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const App = () => (
   <>
     <GlobalStyle/>
+    <GlobalMediaStyle/>
     <AppWrapper className='app'>
       <HeaderPage/>
       <ShoppingCard/>

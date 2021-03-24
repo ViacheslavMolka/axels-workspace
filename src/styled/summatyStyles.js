@@ -34,13 +34,17 @@ word-wrap: break-word;
     margin-bottom: 0;
     color: #6e6e6e;
 }
+& img { 
+    width: 3rem; 
+    height: 3rem;
+}
 & div.card-body {
     display: flex;
     flex-direction: column;
     padding: 0 0 0 7px;
     font-size: 10px;
     font-weight: 500;
-  } 
+} 
 `
 
 export const WrapperListItems = styled.div`

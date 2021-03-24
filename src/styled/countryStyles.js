@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CountryGroup = styled.div`
+const CountryGroup = styled.div`
 display: flex;
 & select {
     height: 38px;
@@ -17,3 +17,5 @@ display: flex;
     }
 }
 `
+
+export default CountryGroup;

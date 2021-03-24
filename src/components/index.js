@@ -1,10 +1,10 @@
-import BillingComponent from './billingComponent';
+import BillingComponent from './billing';
 import Breadcrumbs from './breadcrumbs';
-import Header from './headerComponent';
-import PaymentComponent from './paymentComponent';
-import ShippingComponent from './shippingComponent';
+import Header from './header';
+import PaymentComponent from './payment';
+import ShippingComponent from './shipping';
 import ShoppingCard from './shoppingCard';
-import SummaryCompoment from './summaryComponent';
+import SummaryCompoment from './summary';
 
 export {
     BillingComponent,

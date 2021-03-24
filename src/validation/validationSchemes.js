@@ -1,4 +1,4 @@
-import * as Yup from "yup";
+import * as Yup from 'yup';
 
 export const ShippingSchema = Yup.object().shape({
   fullname: Yup.string()

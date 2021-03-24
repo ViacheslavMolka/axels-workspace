@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.div`
 display: flex;
 width: 100%;
 position: relative;
@@ -41,4 +41,6 @@ background-color: #ffffff!important;
     top: 6px;
     right: -7px;
 }
-`;
+`
+
+export default HeaderWrapper;

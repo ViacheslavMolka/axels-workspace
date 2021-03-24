@@ -1,15 +1,16 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 
-import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/summatyStyles';
+import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/index';
 
 const SummaryCompoment = ({data}) => {
     let subtotal = 0;
-    let cards = data.map((item, idx) => {
+    
+    const cards = data.map((item, idx) => {
         subtotal += item.price;
-        return(
+        return (
             <Cards key={idx}>
-                <Card.Img style={{ width: '3rem', height: '3rem' }} src={item.image_url}/>
+                <Card.Img src={item.image_url}/>
                 <Card.Body>
                     <span className='card-title'>{item.title}</span>
                     <span>{item.color}</span>
@@ -18,7 +19,7 @@ const SummaryCompoment = ({data}) => {
                 <span className='card-title'>${item.price}</span>
             </Cards>
         )
-    })
+    });
 
     return (
         <>

@@ -2,7 +2,7 @@ import React from 'react';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Breadcrumb } from 'react-bootstrap';
 
-import { Bread } from '../styled/breadcrumbStyles';
+import { Bread } from '../styled/index';
 
 const Breadcrumbs = () => (
     <Bread>

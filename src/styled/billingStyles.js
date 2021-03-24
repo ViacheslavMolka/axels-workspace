@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BillingTitle = styled.div`
+const BillingTitle = styled.div`
 display: flex;
 justify-content: space-between;
 & a{
@@ -12,3 +12,5 @@ justify-content: space-between;
     padding: 26px 0 16px 0;
 }
 `
+
+export default BillingTitle;

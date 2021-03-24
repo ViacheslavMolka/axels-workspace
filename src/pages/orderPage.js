@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { SummaryCompoment } from '../components/index';
 
-import { loadData } from '../actions/actions';
+import { loadData } from '../redux/ducks/orders';
 
 const OrderPage = () => {
     const dispatch = useDispatch();

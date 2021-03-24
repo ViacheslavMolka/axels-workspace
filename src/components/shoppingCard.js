@@ -5,24 +5,24 @@ import { Row, Col } from 'react-bootstrap';
 import { Breadcrumbs, ShippingComponent, PaymentComponent, BillingComponent } from './index';
 import OrderPage from '../pages/orderPage';
 
-import { RouteWrapper } from '../styled/shoppingCardStyles';
+import { RouteWrapper } from '../styled/index';
 
 
 const ShoppingCard = () => (
     <Router>
-                <Row>
-                    <Col sm={4}>
-                        <Breadcrumbs/>                  
-                        <RouteWrapper>
-                            <Route path='/shipping/' component={ShippingComponent} exact/>
-                            <Route path='/billing/' component={BillingComponent} exact/>
-                            <Route path='/payment/' component={PaymentComponent} exact/>
-                        </RouteWrapper>                       
-                    </Col>                   
-                    <Col sm={3}>
-                        <OrderPage/>
-                    </Col>
-                </Row>          
+        <Row>
+            <Col sm={4}>
+                <Breadcrumbs/>                  
+                <RouteWrapper>
+                    <Route path='/shipping/' component={ShippingComponent} exact/>
+                    <Route path='/billing/' component={BillingComponent} exact/>
+                    <Route path='/payment/' component={PaymentComponent} exact/>
+                </RouteWrapper>                       
+            </Col>                   
+            <Col sm={3}>
+                <OrderPage/>
+            </Col>
+        </Row>          
     </Router>  
 );
 

@@ -5,34 +5,35 @@ import { Lock } from 'react-bootstrap-icons';
 
 import { PaymentSchema } from '../validation/validationSchemes';
 
-import { PaymentWrapper } from '../styled/paymentStyles';
+import { PaymentWrapper } from '../styled/index';
 
 const PaymentComponent = () => {
     
     const allFormData = {
-        shipping: JSON.parse(localStorage.formShippingData),
-        billing: JSON.parse(localStorage.formBillingData)
+        shipping: JSON.parse(localStorage.getItem('formShippingData')),
+        billing: JSON.parse(localStorage.getItem('formBillingData'))
     }
-    // console.log(allFormData.billing, allFormData.shipping)
+
+    const obj = {
+        fullname: '',
+        number: '',
+        date: '',
+        code: ''
+    }
 
     return (
-    <> 
-        <PaymentWrapper>
-            <label className='payment-info'>Payment</label>
-            <p><Lock size={18}/> This is secure 128-bit SSL encrypted payment</p>
-        </PaymentWrapper>     
+        <> 
+            <PaymentWrapper>
+                <label className='payment-info'>Payment</label>
+                <p><Lock size={18}/> This is secure 128-bit SSL encrypted payment</p>
+            </PaymentWrapper>     
 
             <Formik
-            initialValues={{
-                fullname: '',
-                number: '',
-                date: '',
-                code: ''
-            }}
-            validateOnBlur
-            validationSchema={PaymentSchema}
-            onSubmit={values => console.log(allFormData.billing, allFormData.shipping, values)}
-        >
+                initialValues={obj}
+                validateOnBlur
+                validationSchema={PaymentSchema}
+                onSubmit={values => console.log(allFormData.shipping, allFormData.billing, values)}
+            >
             {({
                 values,
                 handleChange,
@@ -41,7 +42,8 @@ const PaymentComponent = () => {
                 isValid,
                 dirty
             }) => (
-                <Form onSubmit={handleSubmit}>                        
+                <Form onSubmit={handleSubmit}>     
+                                   
                     <label>Cardholder Name</label>
                     <InputGroup className="mb-3">
                         <FormControl 
@@ -96,8 +98,8 @@ const PaymentComponent = () => {
                     Pay Securely</Button>
                 </Form>
             )}
-        </Formik>       
-    </>
+            </Formik>       
+        </>
     )
 }
 
