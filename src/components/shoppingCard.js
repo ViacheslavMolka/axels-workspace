@@ -26,5 +26,4 @@ const ShoppingCard = () => (
     </Router>  
 );
 
-
 export default ShoppingCard;

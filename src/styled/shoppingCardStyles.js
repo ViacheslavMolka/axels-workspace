@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+import { colors } from './globalConstants';
+
 export const MainTitle = styled.label`
 font-size: 27px;
-color: #7f00ad;
+color: ${colors.main};
 padding: 20px 0 16px 0;
 `
 

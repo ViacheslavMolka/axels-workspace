@@ -18,6 +18,6 @@ const OrderPage = () => {
             {value && <SummaryCompoment data={value}/>}
         </>
     )
-}
+};
 
 export default OrderPage;

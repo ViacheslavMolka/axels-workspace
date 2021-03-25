@@ -7,20 +7,18 @@ import { PaymentSchema } from '../validation/validationSchemes';
 
 import { PaymentWrapper } from '../styled/index';
 
-const PaymentComponent = () => {
-    
+const PaymentComponent = () => {  
     const allFormData = {
         shipping: JSON.parse(localStorage.getItem('formShippingData')),
         billing: JSON.parse(localStorage.getItem('formBillingData'))
-    }
+    };
 
-    const obj = {
+    const initialValues = {
         fullname: '',
         number: '',
         date: '',
         code: ''
-    }
-
+    };
     return (
         <> 
             <PaymentWrapper>
@@ -29,7 +27,7 @@ const PaymentComponent = () => {
             </PaymentWrapper>     
 
             <Formik
-                initialValues={obj}
+                initialValues={initialValues}
                 validateOnBlur
                 validationSchema={PaymentSchema}
                 onSubmit={values => console.log(allFormData.shipping, allFormData.billing, values)}
@@ -101,6 +99,6 @@ const PaymentComponent = () => {
             </Formik>       
         </>
     )
-}
+};
 
 export default PaymentComponent;

@@ -23,9 +23,9 @@ const ShippingComponent = () => {
     const saveFormShipping = (a) => {
         a.country = country.val;
         return localStorage.setItem('formShippingData', JSON.stringify(a));
-    }
+    };
 
-    const obj = {
+    const initialValues = {
         fullname: '',
         phone: '',
         address: '',
@@ -33,15 +33,14 @@ const ShippingComponent = () => {
         city: '',
         country: '',
         zip: ''
-    }
-
+    };
     return (
         <InputWrapper>
             <MainTitle>Shipping Info</MainTitle>
             <label>Recipient</label>
 
             <Formik
-                initialValues={obj}
+                initialValues={initialValues}
                 validateOnBlur
                 validationSchema={ShippingSchema}
                 onSubmit={values => saveFormShipping(values)}

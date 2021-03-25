@@ -23,9 +23,9 @@ const BillingComponent = () => {
     const saveFormBilling = (a) => {
         a.country = country.val;
         return localStorage.setItem('formBillingData', JSON.stringify(a));
-    }
+    };
 
-    const obj = {
+    const initialValues = {
         fullname: '',
         email: '',
         address: '',
@@ -33,8 +33,7 @@ const BillingComponent = () => {
         city: '',
         country: '',
         zip: ''
-    }
-
+    };
     return (
         <>
             <BillingTitle>
@@ -44,7 +43,7 @@ const BillingComponent = () => {
             <label>Billing Contact</label>
 
             <Formik
-                initialValues={obj}
+                initialValues={initialValues}
                 validateOnBlur
                 validationSchema={BillingSchema}
                 onSubmit={values => saveFormBilling(values)}
@@ -147,6 +146,6 @@ const BillingComponent = () => {
             </Formik>
         </>
     )
-}
+};
 
 export default BillingComponent;

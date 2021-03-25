@@ -10,6 +10,6 @@ const HeaderPage = () => {
             {number && <Header number={number}/>}
         </>
     )
-}
+};
 
 export default HeaderPage;

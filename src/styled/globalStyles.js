@@ -1,14 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
+import { colors } from './globalConstants';
+
 const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   padding: 0;
-  background: #e5e8ff;
+  background: ${colors.background};
 }
 
 label {
-  color: #7f00ad;
+  color: ${colors.main};
 }
 
 &.row {
@@ -18,13 +20,13 @@ label {
 }
 
 &.row button {
-  background-color: #7f00ad;
+  background-color: ${colors.main};
   margin-top: 1rem;
   width: 45%;
 }
 
 &.col-sm-4 {
-  background-color: #fff;
+  background-color: ${colors.white};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +38,7 @@ label {
 } 
 
 &.col-sm-3 {
-  background-color: #f2f4ff;
+  background-color: ${colors.order};
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   box-shadow: 1px 0px 7px rgb(0 0 0 / 10%);
@@ -45,7 +47,7 @@ label {
 &.mb-3 p {
   display: flex;
   align-items: center;
-  color: #6e6e6e;
+  color: ${colors.text};
   font-size: 13px;
   width: 130px;
   margin: 0 10px 0 10px;
@@ -62,11 +64,11 @@ label {
 }
 
 &.form-control {
-  color: #000;
+  color: ${colors.black};
 }
 
 &.error {
-    background-color: #fff9eb;
+  background-color: ${colors.formErr};
 }
 
 &.form-control[placeholder] {
