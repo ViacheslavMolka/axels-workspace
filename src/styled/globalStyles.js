@@ -38,11 +38,23 @@ label {
 } 
 
 &.col-sm-3 {
+  position: relative;
   background-color: ${colors.order};
   border-top-right-radius: 7px;
   border-bottom-right-radius: 7px;
   box-shadow: 1px 0px 7px rgb(0 0 0 / 10%);
 }
+
+&.order-opacity {
+  z-index: 10;
+  position: absolute;
+  background-color: rgba(245, 245, 245, 0.4);
+  display:block;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+} 
 
 &.mb-3 p {
   display: flex;

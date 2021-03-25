@@ -91,6 +91,7 @@ const PaymentComponent = () => {
                     <Button 
                         className='pay-btn'
                         disabled={!isValid || !dirty}
+                        onClick={() => {document.location = '/print/'}}
                         type='submit' 
                         variant="primary">
                     Pay Securely</Button>

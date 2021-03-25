@@ -21,8 +21,14 @@ const SummaryCompoment = ({data}) => {
         )
     });
 
+    let classNames = '';
+    if(document.location.pathname == '/print/') {
+        classNames += 'order-opacity'
+    };
+
     return (
         <>
+            <div className={classNames}></div>
             <div>
                 <TopWrapper>
                     <label>Order Summary</label>

@@ -52,7 +52,7 @@ const GlobalMediaStyle = createGlobalStyle`
 &.col-sm-3 {
     @media ${device.laptop} {
         max-width: 100%;
-        border-radius: 0;
+        border-radius: 0!important;
     }
 }
 
