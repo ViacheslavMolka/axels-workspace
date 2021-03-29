@@ -1,9 +1,11 @@
 import React from 'react';
 import { Jumbotron } from '../styled/index';
 
+import { BillingInitialValues } from '../types/types';
+
 
 const PrintOrder = () => {
-    const billing = JSON.parse(localStorage.getItem('formBillingData'));
+    const billing: BillingInitialValues = JSON.parse(localStorage.getItem('formBillingData')!);
 
     return (   
         <Jumbotron>

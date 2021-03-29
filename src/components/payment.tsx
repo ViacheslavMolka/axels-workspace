@@ -5,15 +5,17 @@ import { Lock } from 'react-bootstrap-icons';
 
 import { PaymentSchema } from '../validation/validationSchemes';
 
+import { AllFormData, PaymentInitialValues } from '../types/types';
 import { PaymentWrapper } from '../styled/index';
 
+
 const PaymentComponent = () => {  
-    const allFormData = {
-        shipping: JSON.parse(localStorage.getItem('formShippingData')),
-        billing: JSON.parse(localStorage.getItem('formBillingData'))
+    const allFormData: AllFormData = {
+        shipping: JSON.parse(localStorage.getItem('formShippingData')!),
+        billing: JSON.parse(localStorage.getItem('formBillingData')!)
     };
 
-    const initialValues = {
+    const initialValues: PaymentInitialValues = {
         fullname: '',
         number: '',
         date: '',
@@ -91,7 +93,7 @@ const PaymentComponent = () => {
                     <Button 
                         className='pay-btn'
                         disabled={!isValid || !dirty}
-                        onClick={() => {document.location = '/print/'}}
+                        onClick={() => {document.location.href = '/print/'}}
                         type='submit' 
                         variant="primary">
                     Pay Securely</Button>

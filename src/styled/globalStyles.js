@@ -48,12 +48,12 @@ label {
 &.order-opacity {
   z-index: 10;
   position: absolute;
-  background-color: rgba(245, 245, 245, 0.4);
-  display:block;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
+  background-color: ${colors.orderOpacity};
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 } 
 
 &.mb-3 p {

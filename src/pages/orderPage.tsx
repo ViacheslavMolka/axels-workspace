@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { SummaryCompoment } from '../components/index';
 
 import { loadData } from '../redux/ducks/orders';
+import { RootState } from '../store/store';
+
 
 const OrderPage = () => {
     const dispatch = useDispatch();
-    const value = useSelector(state => state.data);
+    const value = useSelector((state: any) => state.data);
 
     useEffect(() => {
         dispatch(loadData())

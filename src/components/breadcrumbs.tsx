@@ -4,7 +4,8 @@ import { Breadcrumb } from 'react-bootstrap';
 
 import { Bread } from '../styled/index';
 
-const Breadcrumbs = () => (
+
+const Breadcrumbs: React.FC = () => (
     <Bread>
         <LinkContainer to='/shipping/' activeClassName='active'>
             <Breadcrumb.Item>Shipping</Breadcrumb.Item>

@@ -1,10 +1,12 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 
+import { SummaryProps } from '../types/types';
 import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/index';
 
-const SummaryCompoment = ({data}) => {
-    let subtotal = 0;
+
+const SummaryCompoment = ({data}: SummaryProps) => {
+    let subtotal: number = 0;
     
     const cards = data.map((item, idx) => {
         subtotal += item.price;
@@ -21,10 +23,7 @@ const SummaryCompoment = ({data}) => {
         )
     });
 
-    let classNames = '';
-    if(document.location.pathname == '/print/') {
-        classNames += 'order-opacity'
-    };
+    const classNames = document.location.pathname === '/print/' ? 'order-opacity' : '';
 
     return (
         <>

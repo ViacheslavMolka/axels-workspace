@@ -7,7 +7,7 @@ import { GlobalStyle, AppWrapper, GlobalMediaStyle } from '../styled/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const App = () => (
+const App: React.FC = () => (
   <>
     <GlobalStyle/>
     <GlobalMediaStyle/>

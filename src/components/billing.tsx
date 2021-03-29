@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Button, InputGroup, FormControl, OverlayTrigger, Popover } from 'react-bootstrap';
-import { Formik, Form } from 'formik';
 import { CountryDropdown } from 'react-country-region-selector';
+import { Formik, Form } from 'formik';
 import { RecordCircleFill } from 'react-bootstrap-icons';
 
-import { ShippingSchema } from '../validation/validationSchemes';
+import { BillingSchema } from '../validation/validationSchemes';
 
-import { MainTitle, InputWrapper, CountryGroup } from '../styled/index';
+import { ICountry, BillingInitialValues } from '../types/types';
+import { MainTitle, BillingTitle, CountryGroup } from '../styled/index';
 
 
-const ShippingComponent = () => {
-    const [ country, setCountry ] = useState({ val: '' });
+const BillingComponent: React.FC = () => { 
+    const [ country, setCountry ] = useState<ICountry>({ val: '' });
 
     const popover = (
         <Popover id="popover-basic">
@@ -19,15 +20,15 @@ const ShippingComponent = () => {
           </Popover.Content>
         </Popover>
     );
-    
-    const saveFormShipping = (a) => {
+
+    const saveFormBilling = (a: BillingInitialValues) => {
         a.country = country.val;
-        return localStorage.setItem('formShippingData', JSON.stringify(a));
+        return localStorage.setItem('formBillingData', JSON.stringify(a));
     };
 
-    const initialValues = {
+    const initialValues: BillingInitialValues = {
         fullname: '',
-        phone: '',
+        email: '',
         address: '',
         apt: '',
         city: '',
@@ -35,15 +36,18 @@ const ShippingComponent = () => {
         zip: ''
     };
     return (
-        <InputWrapper>
-            <MainTitle>Shipping Info</MainTitle>
-            <label>Recipient</label>
+        <>
+            <BillingTitle>
+                <MainTitle>Billing Information</MainTitle>
+                <a className='billing-link' href='/#'>Same as shipping</a>
+            </BillingTitle>
+            <label>Billing Contact</label>
 
             <Formik
                 initialValues={initialValues}
                 validateOnBlur
-                validationSchema={ShippingSchema}
-                onSubmit={values => saveFormShipping(values)}
+                validationSchema={BillingSchema}
+                onSubmit={values => saveFormBilling(values)}
             >
                 {({
                     values,
@@ -53,7 +57,7 @@ const ShippingComponent = () => {
                     handleSubmit,
                     isValid,
                     dirty
-                }) => (                  
+                }) => (
                     <Form onSubmit={handleSubmit}>                        
 
                         <InputGroup className="mb-3">
@@ -70,19 +74,16 @@ const ShippingComponent = () => {
 
                         <InputGroup className="mb-3">
                             <FormControl
-                                className={errors.phone && 'error'}
-                                name='phone'
-                                value={values.phone}
+                                className={errors.email && 'error'}
+                                name='email'
+                                value={values.email}
                                 onChange={handleChange}
                                 onBlur={handleBlur}
-                                type='number'
-                                placeholder="Daytime Phone"/>
-                            <InputGroup.Append>
-                                <p>For delivery<br/> questions only</p>
-                            </InputGroup.Append>
+                                type='email'
+                                placeholder="Email Address"/>
                         </InputGroup>
 
-                        <label>Address</label>
+                        <label>Billing Address</label>
 
                         <InputGroup className="mb-3">
                             <FormControl 
@@ -135,17 +136,17 @@ const ShippingComponent = () => {
                             </InputGroup>     
                         </CountryGroup>
 
-                            <Button 
-                                disabled={!isValid || country.val === '' || !dirty}
-                                onClick={() => {document.location = '/billing/'}}
-                                type='submit' 
-                                variant="primary">
-                            Continue</Button>
+                        <Button 
+                            disabled={!isValid || country.val === '' || !dirty}
+                            onClick={() => {document.location.href = '/payment/'}}
+                            type='submit' 
+                            variant="primary">
+                        Continue</Button>
                     </Form>
                 )}
             </Formik>
-        </InputWrapper>
+        </>
     )
 };
 
-export default ShippingComponent;
+export default BillingComponent;

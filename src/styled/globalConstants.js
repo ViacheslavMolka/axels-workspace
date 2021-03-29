@@ -28,5 +28,6 @@ export const colors = {
     frontText: '#7f00ad',
     cartText: '#cf4dff',
     circle: '#e00d73',
-    borderCountry: '#cfcfcf'
+    borderCountry: '#cfcfcf',
+    orderOpacity: rgba(245, 245, 245, 0.4)
 };
