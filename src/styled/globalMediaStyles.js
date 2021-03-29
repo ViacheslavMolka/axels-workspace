@@ -20,39 +20,39 @@ const GlobalMediaStyle = createGlobalStyle`
     }
 }
 
-&.row {    
+& body .row {    
     @media ${device.desktop} {
-        width: 85%!important;
+        width: 85%;
     }
     @media ${device.laptop} {
-        width: 100%!important;
+        width: 100%;
     }
     @media ${device.tablet} {
-        width: 80%!important;
+        width: 80%;
         display: block;
         margin: 0 auto;
         margin-top: 50px;
     }
     @media ${device.mobile} {
-        width: 90%!important;
+        width: 90%;
     }
 }
 
-&.col-sm-4 {
+& body .col-sm-4 {
     @media ${device.laptop} {
-        border-radius: 0!important;
+        border-radius: 0;
         padding: 0px 15px 0px 15px;
     }
     @media ${device.tablet} {
-        padding: 10px 15px 20px 15px!important;
-        border-radius: 0!important;
+        padding: 10px 15px 20px 15px;
+        border-radius: 0;
     }
 }
 
-&.col-sm-3 {
+& body .col-sm-3 {
     @media ${device.laptop} {
         max-width: 100%;
-        border-radius: 0!important;
+        border-radius: 0;
     }
 }
 
@@ -81,12 +81,21 @@ const GlobalMediaStyle = createGlobalStyle`
     }
 }
 
-& span.navbar-brand span.frontend-text, span.cart-text {
+& div.header span.navbar-brand .frontend-text {
     @media ${device.desktop} {
         font-size: 25px;   
     }
     @media ${device.mobile} {
-        font-size: 16px!important;
+        font-size: 16px;
+    }
+}
+
+& div.header span.navbar-brand .cart-text {
+    @media ${device.desktop} {
+        font-size: 25px;   
+    }
+    @media ${device.mobile} {
+        font-size: 16px;
     }
 }
 
@@ -96,15 +105,15 @@ const GlobalMediaStyle = createGlobalStyle`
     }
 }  
 
-&.pay-btn {
+& body .row button.pay-btn {
     @media ${device.desktop} {
-        width: 43%!important;
+        width: 45%;
     }
     @media ${device.laptopL} {
-        width: 50%!important;
+        width: 50%;
     }
     @media ${device.laptop} {
-        width: 50%!important;
+        width: 50%;
     }
 } 
 

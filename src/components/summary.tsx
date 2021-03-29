@@ -1,30 +1,17 @@
 import React from 'react';
-import { Card, ListGroup } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
+
+import { OrdersCard } from './index';
 
 import { SummaryProps } from './types';
-import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/index';
+import { TopWrapper, WrapperListItems, BottomWrapper } from '../styled/index';
 
 
-const SummaryCompoment = ({data}: SummaryProps) => {
-    let subtotal: number = 0;
+const SummaryCompoment = ({data, subtotal}: SummaryProps) => {
+    const url = useLocation();
+    const classNames = url.pathname === '/shipping/billing/payment/print/' ? 'order-opacity' : '';
     
-    const cards = data.map((item, idx) => {
-        subtotal += item.price;
-        return (
-            <Cards key={idx}>
-                <Card.Img src={item.image_url}/>
-                <Card.Body>
-                    <span className='card-title'>{item.title}</span>
-                    <span>{item.color}</span>
-                    <span>Quantity: 1</span>
-                </Card.Body>
-                <span className='card-title'>${item.price}</span>
-            </Cards>
-        )
-    });
-
-    const classNames = document.location.pathname === '/print/' ? 'order-opacity' : '';
-
     return (
         <>
             <div className={classNames}></div>
@@ -34,7 +21,7 @@ const SummaryCompoment = ({data}: SummaryProps) => {
                     <a href='/#'>edit order</a>
                 </TopWrapper>    
 
-                {cards}
+                <OrdersCard data={data}/>
                                 
                 <WrapperListItems>
                     <ListGroup>

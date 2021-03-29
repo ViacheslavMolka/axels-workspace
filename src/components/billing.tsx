@@ -3,6 +3,8 @@ import { Button, InputGroup, FormControl, OverlayTrigger, Popover } from 'react-
 import { CountryDropdown } from 'react-country-region-selector';
 import { Formik, Form } from 'formik';
 import { RecordCircleFill } from 'react-bootstrap-icons';
+import { withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 
 import { BillingSchema } from '../validation/validationSchemes';
 
@@ -10,7 +12,7 @@ import { ICountry, BillingInitialValues } from './types';
 import { MainTitle, BillingTitle, CountryGroup } from '../styled/index';
 
 
-const BillingComponent: React.FC = () => { 
+const BillingComponent = ({history}: RouteComponentProps) => { 
     const [ country, setCountry ] = useState<ICountry>({ val: '' });
 
     const popover = (
@@ -23,7 +25,8 @@ const BillingComponent: React.FC = () => {
 
     const saveFormBilling = (a: BillingInitialValues) => {
         a.country = country.val;
-        return localStorage.setItem('formBillingData', JSON.stringify(a));
+        localStorage.setItem('formBillingData', JSON.stringify(a));
+        return history.push('payment/');
     };
 
     const initialValues: BillingInitialValues = {
@@ -138,7 +141,6 @@ const BillingComponent: React.FC = () => {
 
                         <Button 
                             disabled={!isValid || country.val === '' || !dirty}
-                            onClick={() => {document.location.href = '/payment/'}}
                             type='submit' 
                             variant="primary">
                         Continue</Button>
@@ -149,4 +151,4 @@ const BillingComponent: React.FC = () => {
     )
 };
 
-export default BillingComponent;
+export default withRouter(BillingComponent);

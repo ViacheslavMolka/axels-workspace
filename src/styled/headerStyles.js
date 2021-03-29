@@ -8,7 +8,7 @@ width: 100%;
 position: relative;
 justify-content: space-around;
 height: 50px;
-background-color: ${colors.white}!important;
+background-color: ${colors.white};
 &:after {
     content: '';
     position: absolute;

@@ -6,6 +6,7 @@ import ShippingComponent from './shipping';
 import ShoppingCard from './shoppingCard';
 import SummaryCompoment from './summary';
 import PrintOrder from './printOrder';
+import OrdersCard from './ordersCard';
 
 export {
     BillingComponent,
@@ -15,5 +16,6 @@ export {
     ShippingComponent,
     ShoppingCard,
     SummaryCompoment,
-    PrintOrder
+    PrintOrder,
+    OrdersCard
 };

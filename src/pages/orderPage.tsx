@@ -11,13 +11,18 @@ const OrderPage = () => {
     const dispatch = useDispatch();
     const value = useSelector((state: RootState) => state.data);
 
+    let subtotal = 0;
+    value.forEach(item => {
+        subtotal += item.price;
+    })
+
     useEffect(() => {
         dispatch(loadData())
     }, [])
 
     return (
         <>
-            {value && <SummaryCompoment data={value}/>}
+            {value && <SummaryCompoment subtotal={subtotal} data={value}/>}
         </>
     )
 };

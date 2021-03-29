@@ -47,4 +47,9 @@ type Orders = {
 
 export type SummaryProps = {
     data: Orders[]
+    subtotal: number
 };
+
+export type OrdersCardProps = {
+    data: Orders[]
+}

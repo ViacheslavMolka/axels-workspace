@@ -14,10 +14,10 @@ const ShoppingCard = () => (
             <Col sm={4}>
                 <Breadcrumbs/>                  
                 <RouteWrapper>
-                    <Route path='/shipping/' component={ShippingComponent}/>
-                    <Route path='/billing/' component={BillingComponent}/>
-                    <Route path='/payment/' component={PaymentComponent}/>
-                    <Route path='/print/' component={PrintOrder}/>
+                    <Route path='/shipping/' component={ShippingComponent} exact/>
+                    <Route path='/shipping/billing/' component={BillingComponent} exact/>
+                    <Route path='/shipping/billing/payment/' component={PaymentComponent} exact/>
+                    <Route path='/shipping/billing/payment/print/' component={PrintOrder} exact/>
                 </RouteWrapper>                       
             </Col>                   
             <Col sm={3}>

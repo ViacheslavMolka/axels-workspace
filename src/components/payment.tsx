@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, InputGroup, FormControl, Form, Col } from 'react-bootstrap';
 import { Formik } from 'formik';
 import { Lock } from 'react-bootstrap-icons';
+import { withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 
 import { PaymentSchema } from '../validation/validationSchemes';
 
@@ -9,10 +11,15 @@ import { AllFormData, PaymentInitialValues } from './types';
 import { PaymentWrapper } from '../styled/index';
 
 
-const PaymentComponent = () => {  
+const PaymentComponent = ({history}: RouteComponentProps) => {  
     const allFormData: AllFormData = {
         shipping: JSON.parse(localStorage.getItem('formShippingData')!),
         billing: JSON.parse(localStorage.getItem('formBillingData')!)
+    };
+
+    const sendForm = (a: PaymentInitialValues) => {
+        console.log(allFormData.shipping, allFormData.billing, a);
+        return history.push('print/');
     };
 
     const initialValues: PaymentInitialValues = {
@@ -32,7 +39,7 @@ const PaymentComponent = () => {
                 initialValues={initialValues}
                 validateOnBlur
                 validationSchema={PaymentSchema}
-                onSubmit={values => console.log(allFormData.shipping, allFormData.billing, values)}
+                onSubmit={values => sendForm(values)}
             >
             {({
                 values,
@@ -93,7 +100,6 @@ const PaymentComponent = () => {
                     <Button 
                         className='pay-btn'
                         disabled={!isValid || !dirty}
-                        onClick={() => {document.location.href = '/print/'}}
                         type='submit' 
                         variant="primary">
                     Pay Securely</Button>
@@ -104,4 +110,4 @@ const PaymentComponent = () => {
     )
 };
 
-export default PaymentComponent;
+export default withRouter(PaymentComponent);
