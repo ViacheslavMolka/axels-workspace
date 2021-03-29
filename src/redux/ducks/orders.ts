@@ -1,17 +1,16 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
 
-const PUT_DATA: string = 'axels-test-task/orders/PUT_DATA';
-const LOAD_DATA: string = 'axels-test-task/orders/LOAD_DATA';
+import { Orders, InitialStateType, PutDataActionType, LoadDataActionType } from './reduxTypes';
 
-type initialStateType = {
-    data: Array<object>
-}
+export const PUT_DATA: string = 'axels-test-task/orders/PUT_DATA';
+export const LOAD_DATA: string = 'axels-test-task/orders/LOAD_DATA';
 
-const initialState: initialStateType = {
+
+const initialState: InitialStateType = {
     data: []
 };
   
-export default function reducer (state = initialState, action: putDataActionType): initialStateType {
+export default function reducer (state = initialState, action: PutDataActionType): InitialStateType {
     switch (action.type) {
     case PUT_DATA:
     return {
@@ -23,17 +22,9 @@ export default function reducer (state = initialState, action: putDataActionType
     }      
 };
 
-type putDataActionType = {
-    type: typeof PUT_DATA
-    payload: Array<object>
-}
 
-type loadDataActionType = {
-    type: typeof LOAD_DATA
-}
-
-export const putData = (payload: []): putDataActionType => ({type: PUT_DATA, payload});
-export const loadData = (): loadDataActionType => ({type: LOAD_DATA});
+export const putData = (payload: Array<Orders>): PutDataActionType => ({type: PUT_DATA, payload});
+export const loadData = (): LoadDataActionType => ({type: LOAD_DATA});
 
 
 async function fetchData() {

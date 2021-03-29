@@ -6,7 +6,7 @@ import { RecordCircleFill } from 'react-bootstrap-icons';
 
 import { BillingSchema } from '../validation/validationSchemes';
 
-import { ICountry, BillingInitialValues } from '../types/types';
+import { ICountry, BillingInitialValues } from './types';
 import { MainTitle, BillingTitle, CountryGroup } from '../styled/index';
 
 

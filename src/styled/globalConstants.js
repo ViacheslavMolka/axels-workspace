@@ -29,5 +29,5 @@ export const colors = {
     cartText: '#cf4dff',
     circle: '#e00d73',
     borderCountry: '#cfcfcf',
-    orderOpacity: rgba(245, 245, 245, 0.4)
+    orderOpacity: 'rgba(245, 245, 245, 0.4)'
 };

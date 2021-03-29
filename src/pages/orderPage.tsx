@@ -9,7 +9,7 @@ import { RootState } from '../store/store';
 
 const OrderPage = () => {
     const dispatch = useDispatch();
-    const value = useSelector((state: any) => state.data);
+    const value = useSelector((state: RootState) => state.data);
 
     useEffect(() => {
         dispatch(loadData())

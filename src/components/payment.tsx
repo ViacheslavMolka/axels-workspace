@@ -5,7 +5,7 @@ import { Lock } from 'react-bootstrap-icons';
 
 import { PaymentSchema } from '../validation/validationSchemes';
 
-import { AllFormData, PaymentInitialValues } from '../types/types';
+import { AllFormData, PaymentInitialValues } from './types';
 import { PaymentWrapper } from '../styled/index';
 
 

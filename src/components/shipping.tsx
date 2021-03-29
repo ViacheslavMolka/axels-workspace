@@ -6,7 +6,7 @@ import { RecordCircleFill } from 'react-bootstrap-icons';
 
 import { ShippingSchema } from '../validation/validationSchemes';
 
-import { ShippingInitialValues, ICountry } from '../types/types';
+import { ShippingInitialValues, ICountry } from './types';
 import { MainTitle, InputWrapper, CountryGroup } from '../styled/index';
 
 

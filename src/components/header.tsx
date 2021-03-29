@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar } from 'react-bootstrap';
 import { CodeSlash, Cart3 } from 'react-bootstrap-icons';
 
-import { HeaderProps } from '../types/types';
+import { HeaderProps } from './types';
 import { HeaderWrapper } from '../styled/index';
 
 

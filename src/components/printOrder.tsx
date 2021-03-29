@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron } from '../styled/index';
 
-import { BillingInitialValues } from '../types/types';
+import { BillingInitialValues } from './types';
 
 
 const PrintOrder = () => {

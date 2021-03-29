@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, ListGroup } from 'react-bootstrap';
 
-import { SummaryProps } from '../types/types';
+import { SummaryProps } from './types';
 import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/index';
 
 
