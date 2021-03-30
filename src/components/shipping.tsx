@@ -3,14 +3,21 @@ import { Button, InputGroup, FormControl, OverlayTrigger, Popover } from 'react-
 import { Formik, Form } from 'formik';
 import { CountryDropdown } from 'react-country-region-selector';
 import { RecordCircleFill } from 'react-bootstrap-icons';
+import { withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 
 import { ShippingSchema } from '../validation/validationSchemes';
 
+import { ShippingInitialValues, ICountry } from './types';
 import { MainTitle, InputWrapper, CountryGroup } from '../styled/index';
 
 
-const ShippingComponent = () => {
-    const [ country, setCountry ] = useState({ val: '' });
+const ShippingComponent = ({history}: RouteComponentProps) => {
+    navigator.geolocation.getCurrentPosition(pos => {
+        console.log(pos)
+    });
+
+    const [ country, setCountry ] = useState<ICountry>({ val: '' });
 
     const popover = (
         <Popover id="popover-basic">
@@ -20,12 +27,13 @@ const ShippingComponent = () => {
         </Popover>
     );
     
-    const saveFormShipping = (a) => {
+    const saveFormShipping = (a: ShippingInitialValues) => {
         a.country = country.val;
-        return localStorage.setItem('formShippingData', JSON.stringify(a));
-    }
+        localStorage.setItem('formShippingData', JSON.stringify(a));
+        return history.push('billing/');
+    };
 
-    const obj = {
+    const initialValues: ShippingInitialValues = {
         fullname: '',
         phone: '',
         address: '',
@@ -33,15 +41,14 @@ const ShippingComponent = () => {
         city: '',
         country: '',
         zip: ''
-    }
-
+    };
     return (
         <InputWrapper>
             <MainTitle>Shipping Info</MainTitle>
             <label>Recipient</label>
 
             <Formik
-                initialValues={obj}
+                initialValues={initialValues}
                 validateOnBlur
                 validationSchema={ShippingSchema}
                 onSubmit={values => saveFormShipping(values)}
@@ -138,7 +145,6 @@ const ShippingComponent = () => {
 
                             <Button 
                                 disabled={!isValid || country.val === '' || !dirty}
-                                onClick={() => {document.location = '/billing/'}}
                                 type='submit' 
                                 variant="primary">
                             Continue</Button>
@@ -149,4 +155,4 @@ const ShippingComponent = () => {
     )
 };
 
-export default ShippingComponent;
+export default withRouter(ShippingComponent);

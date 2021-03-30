@@ -1,11 +1,13 @@
 import styled from 'styled-components'; 
 
+import { colors } from './globalConstants';
+
 export const TopWrapper = styled.div`
 display: flex;
 justify-content: space-between;
 padding-top: 15px;
 & a {
-    color: #6e6e6e;
+    color: ${colors.text};
 }
 `
 
@@ -15,7 +17,7 @@ position: relative;
 flex-direction: row;
 width: 100%;
 border: 0;
-background-color: #f2f4ff;
+background-color: ${colors.order};
 min-width: 0;
 word-wrap: break-word;
 &:not(:first-child) {
@@ -27,12 +29,12 @@ word-wrap: break-word;
     width: 100%;
     height: 1px;
     bottom: -8px;
-    background-color: #e3e1eb;
+    background-color: ${colors.line};
 }
 & span.card-title {
     font-size: 12px;
     margin-bottom: 0;
-    color: #6e6e6e;
+    color: ${colors.text};
 }
 & img { 
     width: 3rem; 
@@ -57,18 +59,18 @@ position: relative;
     width: 100%;
     height: 1px;
     bottom: -8px;
-    background-color: #e3e1eb;
+    background-color: ${colors.line};
 }
 & div.list-group {
     margin-top: 1rem;
     position: relative;
 }
 & div.list-group div.list-group-item{
-    background-color: #f2f4ff;
+    background-color: ${colors.order};
     border: 0;
     padding: 0.3rem 0 0 0;
     font-size: 12px;
-    color: #6e6e6e;
+    color: ${colors.text};
 }
 `
 

@@ -3,14 +3,17 @@ import { Button, InputGroup, FormControl, OverlayTrigger, Popover } from 'react-
 import { CountryDropdown } from 'react-country-region-selector';
 import { Formik, Form } from 'formik';
 import { RecordCircleFill } from 'react-bootstrap-icons';
+import { withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
 
 import { BillingSchema } from '../validation/validationSchemes';
 
+import { ICountry, BillingInitialValues } from './types';
 import { MainTitle, BillingTitle, CountryGroup } from '../styled/index';
 
 
-const BillingComponent = () => {
-    const [ country, setCountry ] = useState({ val: '' });
+const BillingComponent = ({history}: RouteComponentProps) => { 
+    const [ country, setCountry ] = useState<ICountry>({ val: '' });
 
     const popover = (
         <Popover id="popover-basic">
@@ -20,12 +23,13 @@ const BillingComponent = () => {
         </Popover>
     );
 
-    const saveFormBilling = (a) => {
+    const saveFormBilling = (a: BillingInitialValues) => {
         a.country = country.val;
-        return localStorage.setItem('formBillingData', JSON.stringify(a));
-    }
+        localStorage.setItem('formBillingData', JSON.stringify(a));
+        return history.push('payment/');
+    };
 
-    const obj = {
+    const initialValues: BillingInitialValues = {
         fullname: '',
         email: '',
         address: '',
@@ -33,8 +37,7 @@ const BillingComponent = () => {
         city: '',
         country: '',
         zip: ''
-    }
-
+    };
     return (
         <>
             <BillingTitle>
@@ -44,7 +47,7 @@ const BillingComponent = () => {
             <label>Billing Contact</label>
 
             <Formik
-                initialValues={obj}
+                initialValues={initialValues}
                 validateOnBlur
                 validationSchema={BillingSchema}
                 onSubmit={values => saveFormBilling(values)}
@@ -138,7 +141,6 @@ const BillingComponent = () => {
 
                         <Button 
                             disabled={!isValid || country.val === '' || !dirty}
-                            onClick={() => {document.location = '/payment/'}}
                             type='submit' 
                             variant="primary">
                         Continue</Button>
@@ -147,6 +149,6 @@ const BillingComponent = () => {
             </Formik>
         </>
     )
-}
+};
 
-export default BillingComponent;
+export default withRouter(BillingComponent);

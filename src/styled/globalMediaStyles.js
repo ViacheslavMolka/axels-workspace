@@ -1,101 +1,124 @@
 import { createGlobalStyle } from 'styled-components';
+import { device } from './globalConstants';
 
 const GlobalMediaStyle = createGlobalStyle`
 &.app {
-    @media (min-width: 2550px) and (max-width: 2786px) {
-        width: 100%!important;   
+    @media ${device.desktop} {
+        width: 100%;   
     }
-    @media (max-width: 1200px) {
-        width: 80%!important;
+    @media ${device.laptopL} {
+        width: 80%;
     }
-    @media (max-width: 992px) {
-        width: 75%!important;
+    @media ${device.laptop} {
+        width: 85%;
     }
-    @media (max-width: 767px) {
-        width: 80%!important;
+    @media ${device.tablet} {
+        width: 80%;
     }
-    @media (max-width: 520px) {
-        width: 100%!important;
+    @media ${device.mobile} {
+        width: 100%;
     }
 }
 
-&.row {    
-    @media (min-width: 2550px) and (max-width: 2786px) {
-        width: 2000px;   
+& body .row {    
+    @media ${device.desktop} {
+        width: 85%;
     }
-    @media (max-width: 992px) {
-        width: 80%!important;
+    @media ${device.laptop} {
+        width: 100%;
+    }
+    @media ${device.tablet} {
+        width: 80%;
         display: block;
         margin: 0 auto;
         margin-top: 50px;
     }
-    @media (max-width: 520px) {
-        width: 90%!important;
+    @media ${device.mobile} {
+        width: 90%;
     }
 }
 
-&.col-sm-4 {
-    @media (max-width: 992px) {
+& body .col-sm-4 {
+    @media ${device.laptop} {
         border-radius: 0;
-        padding: 10px 15px 30px 15px;
+        padding: 0px 15px 0px 15px;
+    }
+    @media ${device.tablet} {
+        padding: 10px 15px 20px 15px;
+        border-radius: 0;
     }
 }
 
-&.col-sm-3 {
-    @media (max-width: 992px) {
+& body .col-sm-3 {
+    @media ${device.laptop} {
         max-width: 100%;
         border-radius: 0;
     }
 }
 
 &.mb-3 p {
-    @media (max-width: 1200px) {
+    @media ${device.laptopL} {
         width: 80px;
         font-size: 11px;
     }
 }
 
-&.breadcrumb-item {
-    @media (min-width: 2550px) and (max-width: 2786px) {
-        font-size: 20px;   
+& a.billing-link {
+    @media ${device.desktop} {
+        font-size: 17px;
     }
-}
-
-&.billing-link {
-    @media (max-width: 1200px) {
+    @media ${device.laptopL} {
         padding-left: 15px;
     }
-    @media (max-width: 768px) {
+    @media ${device.laptop} {
+        font-size: 15px;
+    }
+    @media ${device.tablet} {
         margin-bottom: 8px;
+    }
+    @media ${device.mobile} {
+        font-size: 13px;
     }
 }
 
-&.navbar-brand span.frontend-text, span.cart-text {
-    @media (min-width: 2550px) and (max-width: 2786px) {
+& div.header span.navbar-brand .frontend-text {
+    @media ${device.desktop} {
         font-size: 25px;   
     }
-    @media (max-width: 520px) {
-        font-size: 14px
+    @media ${device.mobile} {
+        font-size: 16px;
+    }
+}
+
+& div.header span.navbar-brand .cart-text {
+    @media ${device.desktop} {
+        font-size: 25px;   
+    }
+    @media ${device.mobile} {
+        font-size: 16px;
     }
 }
 
 &.security-code {
-    @media (max-width: 1200px) {
+    @media ${device.laptopL} {
         padding-right: 40px;
     }
 }  
 
-&.pay-btn {
-    @media (max-width: 1200px) {
-        width: 63%!important;
+& body .row button.pay-btn {
+    @media ${device.desktop} {
+        width: 45%;
     }
-    @media (max-width: 992px) {
-        width: 50%!important;
+    @media ${device.laptopL} {
+        width: 50%;
+    }
+    @media ${device.laptop} {
+        width: 50%;
     }
 } 
 
 &.bottom-wrapp {
-    @media (max-width: 520px) {
+    @media ${device.mobile} {
         height: 200px;
     }
 }
