@@ -1,35 +1,27 @@
 import React from 'react';
-import { Card, ListGroup } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 
-import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from '../styled/index';
+import { OrdersCard } from './index';
 
-const SummaryCompoment = ({data}) => {
-    let subtotal = 0;
+import { SummaryProps } from './types';
+import { TopWrapper, WrapperListItems, BottomWrapper } from '../styled/index';
+
+
+const SummaryCompoment = ({data, subtotal}: SummaryProps) => {
+    const url = useLocation();
+    const classNames = url.pathname === '/shipping/billing/payment/print/' ? 'order-opacity' : '';
     
-    const cards = data.map((item, idx) => {
-        subtotal += item.price;
-        return (
-            <Cards key={idx}>
-                <Card.Img src={item.image_url}/>
-                <Card.Body>
-                    <span className='card-title'>{item.title}</span>
-                    <span>{item.color}</span>
-                    <span>Quantity: 1</span>
-                </Card.Body>
-                <span className='card-title'>${item.price}</span>
-            </Cards>
-        )
-    });
-
     return (
         <>
+            <div className={classNames}></div>
             <div>
                 <TopWrapper>
                     <label>Order Summary</label>
                     <a href='/#'>edit order</a>
                 </TopWrapper>    
 
-                {cards}
+                <OrdersCard data={data}/>
                                 
                 <WrapperListItems>
                     <ListGroup>

@@ -5,6 +5,7 @@ import CountryGroup from './countryStyles';
 import GlobalMediaStyle from './globalMediaStyles';
 import GlobalStyle from './globalStyles';
 import HeaderWrapper from './headerStyles';
+import Jumbotron from './printOrderStyles';
 import { TextLabel, PaymentWrapper } from './paymentStyles';
 import { MainTitle, InputWrapper, RouteWrapper} from './shoppingCardStyles';
 import { TopWrapper, Cards, WrapperListItems, BottomWrapper } from './summatyStyles';
@@ -26,5 +27,6 @@ export {
     TopWrapper,
     Cards,
     WrapperListItems,
-    BottomWrapper
+    BottomWrapper,
+    Jumbotron
 };
