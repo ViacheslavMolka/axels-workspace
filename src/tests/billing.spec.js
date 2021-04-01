@@ -1,14 +1,13 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
 import renderer from 'react-test-renderer';
-import Adapter from 'enzyme-adapter-react-16';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import BillingComponent from '../components/billing';
 
 
-configure({ adapter: new Adapter() });
-
-it('BillingComponent snapshot', () => {
-    const component = shallow(<BillingComponent />);
-    expect(component).toMatchSnapshot();
+describe('Billing component', () => {
+    it('Billing snapshot', () => {
+        const component = renderer.create(<Router><BillingComponent/></Router>).toJSON()
+        expect(component).toMatchSnapshot()
+    });
 });

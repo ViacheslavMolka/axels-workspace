@@ -1,14 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import renderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import PaymentComponent from '../components/payment';
 
 
-configure({ adapter: new Adapter() });
-
-it('PaymentComponent snapshot', () => {
-    const component = shallow(<PaymentComponent />);
-    expect(component).toMatchSnapshot();
+describe('PaymentComponent component', () => {
+    it('PaymentComponent snapshot', () => {
+        const component = renderer.create(<Router><PaymentComponent/></Router>).toJSON()
+        expect(component).toMatchSnapshot()
+    });
 });

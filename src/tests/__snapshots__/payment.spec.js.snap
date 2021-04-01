@@ -1,3 +1,110 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PaymentComponent component PaymentComponent snapshot 1`] = `
+Array [
+  <div
+    className="sc-iBPRYJ bNkZwJ"
+  >
+    <label
+      className="payment-info"
+    >
+      Payment
+    </label>
+    <p>
+      <svg
+        fill="currentColor"
+        height={18}
+        viewBox="0 0 16 16"
+        width={18}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+        />
+      </svg>
+       This is secure 128-bit SSL encrypted payment
+    </p>
+  </div>,
+  <form
+    className=""
+    onSubmit={[Function]}
+  >
+    <label>
+      Cardholder Name
+    </label>
+    <div
+      className="mb-3 input-group"
+    >
+      <input
+        className="form-control"
+        name="fullname"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="Name as it appears on your card"
+        type="text"
+        value=""
+      />
+    </div>
+    <label>
+      Card Number
+    </label>
+    <div
+      className="mb-3 input-group"
+    >
+      <input
+        className="form-control"
+        maxLength={19}
+        name="number"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="XXXX XXXX XXXX XXXX"
+        value=""
+      />
+    </div>
+    <div
+      className="form-row"
+    >
+      <div
+        className="expire-date col"
+      >
+        <label>
+          Expire Date
+        </label>
+        <input
+          className="form-control"
+          maxLength={7}
+          name="date"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="MM / YY"
+          value=""
+        />
+      </div>
+      <div
+        className="security-code col"
+      >
+        <label>
+          Security Code
+        </label>
+        <input
+          className="form-control"
+          name="code"
+          onBlur={[Function]}
+          onChange={[Function]}
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      className="pay-btn btn btn-primary"
+      disabled={true}
+      type="submit"
+    >
+      Pay Securely
+    </button>
+  </form>,
+]
+`;
+
 exports[`PaymentComponent snapshot 1`] = `ShallowWrapper {}`;

@@ -1,13 +1,13 @@
 import React from 'react';
-import { shallow, configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import renderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import ShippingComponent from '../components/shipping';
 
 
-configure({ adapter: new Adapter() });
-
-it('ShippingComponent snapshot', () => {
-    const component = shallow(<ShippingComponent />);
-    expect(component).toMatchSnapshot();
+describe('ShippingComponent component', () => {
+    it('ShippingComponent snapshot', () => {
+        const component = renderer.create(<Router><ShippingComponent/></Router>).toJSON()
+        expect(component).toMatchSnapshot()
+    });
 });

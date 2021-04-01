@@ -1,14 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import renderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import Breadcrumbs from '../components/breadcrumbs';
 
 
-configure({ adapter: new Adapter() });
-
-it('Breadcrumbs snapshot', () => {
-    const component = shallow(<Breadcrumbs />);
-    expect(component).toMatchSnapshot();
-});
+describe('Breadcrumbs component', () => {
+    it('Breadcrumbs snapshot', () => {
+        const component = renderer.create(<Router><Breadcrumbs/></Router>).toJSON()
+        expect(component).toMatchSnapshot()
+    });
+})

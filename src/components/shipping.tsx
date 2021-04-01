@@ -13,10 +13,6 @@ import { MainTitle, InputWrapper, CountryGroup } from '../styled/index';
 
 
 const ShippingComponent = ({history}: RouteComponentProps) => {
-    navigator.geolocation.getCurrentPosition(pos => {
-        console.log(pos)
-    });
-
     const [ country, setCountry ] = useState<ICountry>({ val: '' });
 
     const popover = (

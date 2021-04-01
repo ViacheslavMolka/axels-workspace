@@ -1,14 +1,14 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import React from 'react';;
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { store } from '../store/store';
 
 import App from '../components/App';
 
 
-configure({ adapter: new Adapter() });
-
-it('App snapshot', () => {
-    const component = shallow(<App />);
-    expect(component).toMatchSnapshot();
-});
+describe('App component', () => {
+    it('App snapshot', () => {
+        const component = renderer.create(<Provider store={store}><App/></Provider>).toJSON()
+        expect(component).toMatchSnapshot()
+    });
+})

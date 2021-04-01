@@ -1,3 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Breadcrumbs component Breadcrumbs snapshot 1`] = `
+<ol
+  className="sc-dlfnbm ffohbB"
+>
+  <li
+    className="breadcrumb-item"
+    onClick={[Function]}
+  >
+    <a
+      href="/shipping/"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Shipping
+    </a>
+  </li>
+  <li
+    className="breadcrumb-item"
+    onClick={[Function]}
+  >
+    <a
+      href="/shipping/billing/"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Billing
+    </a>
+  </li>
+  <li
+    className="breadcrumb-item"
+    onClick={[Function]}
+  >
+    <a
+      href="/shipping/billing/payment/"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+    >
+      Payment
+    </a>
+  </li>
+</ol>
+`;
+
 exports[`Breadcrumbs snapshot 1`] = `ShallowWrapper {}`;

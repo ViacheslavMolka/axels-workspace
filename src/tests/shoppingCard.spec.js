@@ -1,14 +1,14 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import { store } from '../store/store';
 
 import ShoppingCard from '../components/shoppingCard';
 
 
-configure({ adapter: new Adapter() });
-
-it('ShoppingCard snapshot', () => {
-    const component = shallow(<ShoppingCard />);
-    expect(component).toMatchSnapshot();
+describe('ShoppingCard component', () => {
+    it('ShoppingCard snapshot', () => {
+        const component = renderer.create(<Provider store={store}><ShoppingCard/></Provider>).toJSON()
+        expect(component).toMatchSnapshot()
+    });
 });

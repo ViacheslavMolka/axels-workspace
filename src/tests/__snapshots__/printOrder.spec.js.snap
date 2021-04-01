@@ -1,3 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`PrintOrder component PrintOrder snapshot 1`] = `
+<div
+  className="sc-jSgupP jwxzfW"
+>
+  <label>
+    Thank you for you order!
+  </label>
+  <p>
+    <strong>
+      Order number is: 188787788
+    </strong>
+  </p>
+  <p>
+    Your will recieve an email confirmation
+    <br />
+    shorty to 
+    <a
+      href="/#"
+    >
+      Email is not specified!
+    </a>
+  </p>
+  <p>
+    Estimated delivery Day is
+    <br />
+    <strong>
+       Friday 1st April 2016
+    </strong>
+  </p>
+  <a
+    href="/#"
+  >
+    Print Recipe
+  </a>
+</div>
+`;
+
 exports[`PrintOrder snapshot 1`] = `ShallowWrapper {}`;
