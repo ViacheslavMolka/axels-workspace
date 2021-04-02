@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, InputGroup, FormControl, Form, Col } from 'react-bootstrap';
 import { Formik } from 'formik';
 import { Lock } from 'react-bootstrap-icons';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { RouteComponentProps } from 'react-router';
 
 import { PaymentSchema } from '../validation/validationSchemes';

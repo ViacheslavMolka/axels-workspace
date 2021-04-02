@@ -3,8 +3,7 @@ import { Button, InputGroup, FormControl, OverlayTrigger, Popover } from 'react-
 import { CountryDropdown } from 'react-country-region-selector';
 import { Formik, Form } from 'formik';
 import { RecordCircleFill } from 'react-bootstrap-icons';
-import { withRouter } from 'react-router-dom';
-import { RouteComponentProps } from 'react-router';
+import { withRouter, RouteComponentProps } from 'react-router';
 
 import { BillingSchema } from '../validation/validationSchemes';
 

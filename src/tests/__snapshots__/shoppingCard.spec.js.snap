@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShoppingCard component ShoppingCard snapshot 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-sm-4"
+  >
+    <ol
+      className="sc-dlfnbm ffohbB"
+    >
+      <li
+        className="breadcrumb-item"
+        onClick={[Function]}
+      >
+        <a
+          href="/shipping/"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Shipping
+        </a>
+      </li>
+      <li
+        className="breadcrumb-item"
+        onClick={[Function]}
+      >
+        <a
+          href="/shipping/billing/"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Billing
+        </a>
+      </li>
+      <li
+        className="breadcrumb-item"
+        onClick={[Function]}
+      >
+        <a
+          href="/shipping/billing/payment/"
+          onClick={[Function]}
+          onKeyDown={[Function]}
+        >
+          Payment
+        </a>
+      </li>
+    </ol>
+    <div
+      className="sc-jrAGrp hjHatU"
+    />
+  </div>
+  <div
+    className="col-sm-3"
+  >
+    <div
+      className=""
+    />
+    <div>
+      <div
+        className="sc-kEjbxe fA-dwZJ"
+      >
+        <label>
+          Order Summary
+        </label>
+        <a
+          href="/#"
+        >
+          edit order
+        </a>
+      </div>
+      <div
+        className="sc-crrsfI hQcpOD"
+      >
+        <div
+          className="list-group"
+          onKeyDown={[Function]}
+        >
+          <div
+            className="list-group-item"
+            data-rb-event-key={null}
+            disabled={false}
+            onClick={[Function]}
+          >
+            Subtotal
+          </div>
+          <div
+            className="list-group-item"
+            data-rb-event-key={null}
+            disabled={false}
+            onClick={[Function]}
+          >
+            Shipping
+          </div>
+          <div
+            className="list-group-item"
+            data-rb-event-key={null}
+            disabled={false}
+            onClick={[Function]}
+          >
+            Taxes
+          </div>
+        </div>
+        <div
+          className="list-group"
+          onKeyDown={[Function]}
+        >
+          <div
+            className="list-group-item"
+            data-rb-event-key={null}
+            disabled={false}
+            onClick={[Function]}
+          >
+            $
+            0
+          </div>
+          <div
+            className="list-group-item"
+            data-rb-event-key={null}
+            disabled={false}
+            onClick={[Function]}
+          >
+            Free
+          </div>
+          <div
+            className="list-group-item"
+            data-rb-event-key={null}
+            disabled={false}
+            onClick={[Function]}
+          >
+            $10
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-dQppl bxdFGW bottom-wrapp"
+    >
+      <div
+        className="total-price"
+      >
+        <label>
+          Total
+        </label>
+        <label>
+          $
+          10
+        </label>
+      </div>
+      <div
+        className="footer-text"
+      >
+        All purchases are subject to our Terms and Conditions
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`ShoppingCard snapshot 1`] = `ShallowWrapper {}`;

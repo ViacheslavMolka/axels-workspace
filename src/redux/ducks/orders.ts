@@ -27,12 +27,12 @@ export const putData = (payload: Array<Orders>): PutDataActionType => ({type: PU
 export const loadData = (): LoadDataActionType => ({type: LOAD_DATA});
 
 
-async function fetchData() {
+export async function fetchData() {
     const res = await fetch('http://demo0382925.mockable.io/')
     return await res.json();
 };
 
-function* workerLoadData() {
+export function* workerLoadData() {
     const data: [] = yield call(fetchData);
 
     yield put(putData(data));

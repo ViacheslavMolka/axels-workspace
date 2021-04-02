@@ -3,7 +3,7 @@ import { Button, InputGroup, FormControl, OverlayTrigger, Popover } from 'react-
 import { Formik, Form } from 'formik';
 import { CountryDropdown } from 'react-country-region-selector';
 import { RecordCircleFill } from 'react-bootstrap-icons';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import { RouteComponentProps } from 'react-router';
 
 import { ShippingSchema } from '../validation/validationSchemes';
@@ -13,10 +13,6 @@ import { MainTitle, InputWrapper, CountryGroup } from '../styled/index';
 
 
 const ShippingComponent = ({history}: RouteComponentProps) => {
-    navigator.geolocation.getCurrentPosition(pos => {
-        console.log(pos)
-    });
-
     const [ country, setCountry ] = useState<ICountry>({ val: '' });
 
     const popover = (

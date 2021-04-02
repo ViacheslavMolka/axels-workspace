@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OrdersCard component OrdersCard snapshot 1`] = `
+<div
+  className="sc-iqHYGH ehonnI"
+>
+  <img
+    className="card-img"
+    src="https://source.unsplash.com/u94ywFnPedw"
+  />
+  <div
+    className="card-body"
+  >
+    <span
+      className="card-title"
+    >
+      The Chelsea Boot
+    </span>
+    <span>
+      Black
+    </span>
+    <span>
+      Quantity: 1
+    </span>
+  </div>
+  <span
+    className="card-title"
+  >
+    $
+    30
+  </span>
+</div>
+`;
+
+exports[`OrdersCard snapshot 1`] = `ShallowWrapper {}`;
