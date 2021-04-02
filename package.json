@@ -66,6 +66,7 @@
     "@types/react-router-bootstrap": "^0.24.5",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
-    "jest-enzyme": "^7.1.2"
+    "jest-enzyme": "^7.1.2",
+    "redux-saga-test-plan": "^4.0.1"
   }
 }
